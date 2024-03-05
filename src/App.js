@@ -9,8 +9,6 @@ import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from "react";
 
-
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -19,11 +17,12 @@ const App = (props) => {
                 <Navbar sidebar={props.state.sidebar}/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path="/Dialogs/*" element={<Dialogs state={props.state.dialogsPage}/>}/>
+                        <Route path="/Dialogs/*" element={<Dialogs
+                            dispatch={props.dispatch}
+                            state={props.state.dialogsPage}/>}/>
                         <Route path="/Profile" element={<Profile
                             profilePage={props.state.profilePage}
-                            addPost={props.addPost}
-                            updateNewPostText={props.updateNewPostText}/>}/>
+                            dispatch={props.dispatch}/>}/>
                         <Route path="/News" element={<News/>}/>
                         <Route path="/Music" element={<Music/>}/>
                         <Route path="/Settings" element={<Settings/>}/>
