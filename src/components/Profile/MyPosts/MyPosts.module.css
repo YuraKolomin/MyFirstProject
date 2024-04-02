@@ -6,3 +6,12 @@
 .posts {
     margin: 10px;
 }
+
+.descriptionBlock {
+    padding: 10px;
+}
+
+.backgroundImage {
+    height: 500px;
+    width: 100%;
+}

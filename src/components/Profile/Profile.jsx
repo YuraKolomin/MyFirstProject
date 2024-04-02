@@ -1,19 +1,9 @@
 import React from 'react';
-import s from './Profile.module.css';
-import MyPosts from "./MyPosts/MyPosts";
-import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
-import {updateNewPostText} from "../../redux/state";
-
-
+import MyPostsContainer from "./MyPosts/ProfileInfo/MyPostsContainer";
 
 const Profile = (props) => {
     return <div>
-        <ProfileInfo mainBackground={props.profilePage.mainBackground}/>
-        <MyPosts
-            posts={props.profilePage.posts}
-            addPost={props.addPost}
-            newPostText={props.profilePage.newPostText}
-            updateNewPostText={props.updateNewPostText}/>
+        <MyPostsContainer store={props.store} profile={props.profile}/>
     </div>;
 }
 export default Profile;
