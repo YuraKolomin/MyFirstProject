@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 let initialState = {
     friends: [
@@ -20,11 +19,6 @@ let initialState = {
     ]
 };
 const sidebarReducer = (state = initialState, action) => {
-=======
-import state from "./state";
-
- const sidebarReducer = (state, action) => {
->>>>>>> 7ebe7c62a6672348477b643f695ba75e7fddd185
 
     return state;
 }

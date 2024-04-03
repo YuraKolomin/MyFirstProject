@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
@@ -60,26 +59,6 @@ const dialogsReducer = (state = initialState, action) => {
                 newMessageText: action.freshText
             };
         }
-=======
-import state from "./state";
-
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
-const dialogsReducer = (state, action) => {
-
-    switch (action.type) {
-        case ADD_MESSAGE:
-            let newMessage = {
-                id: 4,
-                message: state.newMessageText,
-            };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state;
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = (action.freshText);
-            return state;
->>>>>>> 7ebe7c62a6672348477b643f695ba75e7fddd185
         default:
             return state;
     }
