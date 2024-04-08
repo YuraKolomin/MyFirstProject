@@ -1,4 +1,5 @@
 import React from 'react';
+import {authAPI} from "../api/api";
 
 
 const SET_USER_DATA = 'SET_USER_DATA';
@@ -21,6 +22,17 @@ function authReducer(state = initialState, action) {
         default:
             return state;
 
+    }
+}
+
+export const getAuthThunk = () => {
+    return (dispatch) => {
+        authAPI.getAuth().then(response => {
+            if (response.data.resultCode === 0) {
+                let {id, email, login} = response.data.data;
+                dispatch(setUserData(id, email, login))
+            }
+        })
     }
 }
 
