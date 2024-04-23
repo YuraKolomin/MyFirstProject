@@ -46,6 +46,9 @@ const Login = (props) => {
                     <button>
                         Login
                     </button>
+                    {props.loginError && (
+                        <div>{props.loginError}</div>
+                    )}
                     <label>
                         Remember me
                     </label>
@@ -60,6 +63,7 @@ const Login = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    loginError: state.auth.loginError
 })
 export default connect(mapStateToProps, {login}) (Login);
