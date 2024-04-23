@@ -1,7 +1,7 @@
-import React from "react";
-import profileReducer from "./profile_reducer";
-import dialogsReducer from "./dialogs_reducer";
-import sidebarReducer from "./sidebar_reducer";
+import React from 'react';
+import profileReducer from './profile_reducer';
+import dialogsReducer from './dialogs_reducer';
+import sidebarReducer from './sidebar_reducer';
 
 /*const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';

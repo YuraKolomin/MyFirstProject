@@ -17,9 +17,7 @@ const MyPosts = (props) => {
  if (!props.profile) {
      return <Preloader />
  }
-
-
-    return <div className={s.content}>
+  return <div className={s.content}>
         <div className={s.postsBlock}>
             <div>
                 <img className={s.backgroundImage} src={props.mainBackground} alt='' />
