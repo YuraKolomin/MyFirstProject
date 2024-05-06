@@ -4,7 +4,7 @@ import Post from './Post/Post';
 import Preloader from "../../Common/Preloader/Preloader";
 import {Link} from "react-router-dom";
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
     let postsElements = props.posts.map(p => <Post image={p.image} message={p.message} likesCount={p.likesCount} key={p.id}/>)
     let onAddPost = () => {
         props.addPost();
@@ -49,5 +49,5 @@ const MyPosts = (props) => {
             </div>
         </div>
     </div>;
-}
+})
 export default MyPosts;

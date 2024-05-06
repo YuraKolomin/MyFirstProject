@@ -16,14 +16,7 @@ let reducers = combineReducers({
     usersPage: usersReducer,
     auth: authReducer,
     app: appReducer
-
 });
-
-/*let store = createStore(reducers, applyMiddleware(thunkMiddleware));*/
-
 export let store = configureStore({
     reducer: reducers}, applyMiddleware(thunkMiddleware));
-
-
-
 export default store;

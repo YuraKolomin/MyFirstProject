@@ -109,8 +109,4 @@ let store = {
     }
 }
 
-
-
-
-//export default store;
 window.state = store;
