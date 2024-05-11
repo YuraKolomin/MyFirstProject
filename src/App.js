@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, HashRouter} from "react-router-dom";
 import React, {lazy, Suspense, useEffect} from "react";
 //import DialogsContainer from "./components/Dialogs/Message/DialogsContainer";
 //import UsersContainer from "./components/Users/UsersContainer";
@@ -25,7 +25,7 @@ function App (props) {
         return <Preloader />
     }
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar sidebar={props.store}/>
