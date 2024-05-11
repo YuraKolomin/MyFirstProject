@@ -25,7 +25,7 @@ function App (props) {
         return <Preloader />
     }
     return (
-        <HashRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar sidebar={props.store}/>
@@ -41,7 +41,7 @@ function App (props) {
                     </Routes>
                 </div>
             </div>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 const mapStateToProps = (state) => ({
